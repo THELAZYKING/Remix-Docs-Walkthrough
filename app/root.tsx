@@ -1,10 +1,6 @@
 import {
-  Links,
   LiveReload,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration
+  Outlet
 } from "remix";
 import type { MetaFunction } from "remix";
 
@@ -20,7 +16,7 @@ export default function App() {
        <title> Remix Document Tutorial</title>
      </head>
      <body>
-       Hello World
+       <Outlet />
          {process.env.NODE_ENV === "development" ? (<LiveReload />) :null}
      </body>
    </html>
